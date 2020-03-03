@@ -9,6 +9,4 @@ picard in chip-seq
 
 
 geonome index installed on TOSHIBA
-
-
 aln with bwa, bowite2 default, bowtie2 --local

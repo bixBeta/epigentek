@@ -1,0 +1,596 @@
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Path to Cutadapt set as: 'cutadapt' (default)
+1.18
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> fastqs/R-in_R1_001.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	134091	AGATCGGAAGAGC	1000000	13.41
+Nextera	3	CTGTCTCTTATA	1000000	0.00
+smallRNA	1	TGGAATTCTCGG	1000000	0.00
+Using Illumina adapter for trimming (count: 134091). Second best hit was Nextera (count: 3)
+
+Writing report to 'R-in_R1_001.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: fastqs/R-in_R1_001.fastq.gz
+Trimming mode: single-end
+Trim Galore version: 0.5.0
+Cutadapt version: 1.18
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length before a sequence gets removed: 10 bp
+Running FastQC on the data once trimming has completed
+Running FastQC with the following extra arguments: '-t 4 --outdir ./fastQC'
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to R-in_R1_001_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file fastqs/R-in_R1_001.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+50000000 sequences processed
+60000000 sequences processed
+70000000 sequences processed
+80000000 sequences processed
+90000000 sequences processed
+100000000 sequences processed
+This is cutadapt 1.18 with Python 3.7.1
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC fastqs/R-in_R1_001.fastq.gz
+Processing reads on 1 core in single-end mode ...
+Finished in 1054.82 s (10 us/read; 6.16 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:             108,243,376
+Reads with adapters:                91,023,111 (84.1%)
+Reads written (passing filters):   108,243,376 (100.0%)
+
+Total basepairs processed: 5,412,168,800 bp
+Quality-trimmed:               2,546,714 bp (0.0%)
+Total written (filtered):  2,990,692,774 bp (55.3%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 91023111 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 57.8%
+  C: 21.4%
+  G: 9.7%
+  T: 9.0%
+  none/other: 2.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	4700685	27060844.0	0	4700685
+2	682018	6765211.0	0	682018
+3	311862	1691302.8	0	311862
+4	153848	422825.7	0	153848
+5	335061	105706.4	0	335061
+6	170105	26426.6	0	170105
+7	273019	6606.7	0	273019
+8	143235	1651.7	0	143235
+9	149866	412.9	0	147259 2607
+10	999129	103.2	1	275966 723163
+11	1272042	25.8	1	332850 939192
+12	1770485	6.5	1	462590 1307895
+13	1636270	1.6	1	491794 1144476
+14	1409588	1.6	1	398930 1010658
+15	1940880	1.6	1	438166 1502714
+16	1871722	1.6	1	555012 1316710
+17	1687582	1.6	1	481010 1206572
+18	1501210	1.6	1	443921 1057289
+19	1242702	1.6	1	337190 905512
+20	1136257	1.6	1	311696 824561
+21	1217660	1.6	1	276563 941097
+22	997753	1.6	1	289135 708618
+23	1031325	1.6	1	365187 666138
+24	1104389	1.6	1	340806 763583
+25	2182182	1.6	1	596864 1585318
+26	2293950	1.6	1	793529 1500421
+27	3646821	1.6	1	690957 2955864
+28	20026645	1.6	1	797670 19228975
+29	8920600	1.6	1	1173881 7746719
+30	4069123	1.6	1	662302 3406821
+31	2155147	1.6	1	573980 1581167
+32	2102208	1.6	1	569790 1532418
+33	1445305	1.6	1	392327 1052978
+34	1249034	1.6	1	263608 985426
+35	624700	1.6	1	185327 439373
+36	448198	1.6	1	144765 303433
+37	490696	1.6	1	158721 331975
+38	482577	1.6	1	220712 261865
+39	396145	1.6	1	110628 285517
+40	367351	1.6	1	117155 250196
+41	431306	1.6	1	129744 301562
+42	565366	1.6	1	166895 398471
+43	960096	1.6	1	273548 686548
+44	931315	1.6	1	229739 701576
+45	1938564	1.6	1	503668 1434896
+46	982203	1.6	1	197397 784806
+47	853016	1.6	1	100287 752729
+48	2258518	1.6	1	291523 1966995
+49	1712426	1.6	1	431476 1280950
+50	1750926	1.6	1	112075 1638851
+
+
+RUN STATISTICS FOR INPUT FILE: fastqs/R-in_R1_001.fastq.gz
+=============================================
+108243376 sequences processed in total
+Sequences removed because they became shorter than the length cutoff of 10 bp:	12404770 (11.5%)
+
+
+  >>> Now running FastQC on the data <<<
+
+Started analysis of R-in_R1_001_trimmed.fq.gz
+Approx 5% complete for R-in_R1_001_trimmed.fq.gz
+Approx 10% complete for R-in_R1_001_trimmed.fq.gz
+Approx 15% complete for R-in_R1_001_trimmed.fq.gz
+Approx 20% complete for R-in_R1_001_trimmed.fq.gz
+Approx 25% complete for R-in_R1_001_trimmed.fq.gz
+Approx 30% complete for R-in_R1_001_trimmed.fq.gz
+Approx 35% complete for R-in_R1_001_trimmed.fq.gz
+Approx 40% complete for R-in_R1_001_trimmed.fq.gz
+Approx 45% complete for R-in_R1_001_trimmed.fq.gz
+Approx 50% complete for R-in_R1_001_trimmed.fq.gz
+Approx 55% complete for R-in_R1_001_trimmed.fq.gz
+Approx 60% complete for R-in_R1_001_trimmed.fq.gz
+Approx 65% complete for R-in_R1_001_trimmed.fq.gz
+Approx 70% complete for R-in_R1_001_trimmed.fq.gz
+Approx 75% complete for R-in_R1_001_trimmed.fq.gz
+Approx 80% complete for R-in_R1_001_trimmed.fq.gz
+Approx 85% complete for R-in_R1_001_trimmed.fq.gz
+Approx 90% complete for R-in_R1_001_trimmed.fq.gz
+Approx 95% complete for R-in_R1_001_trimmed.fq.gz
+Analysis complete for R-in_R1_001_trimmed.fq.gz
+No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
+
+Path to Cutadapt set as: 'cutadapt' (default)
+1.18
+Cutadapt seems to be working fine (tested command 'cutadapt --version')
+
+
+AUTO-DETECTING ADAPTER TYPE
+===========================
+Attempting to auto-detect adapter type from the first 1 million sequences of the first file (>> fastqs/R-pAb_R1_001.fastq.gz <<)
+
+Found perfect matches for the following adapter sequences:
+Adapter type	Count	Sequence	Sequences analysed	Percentage
+Illumina	68974	AGATCGGAAGAGC	1000000	6.90
+Nextera	0	CTGTCTCTTATA	1000000	0.00
+smallRNA	0	TGGAATTCTCGG	1000000	0.00
+Using Illumina adapter for trimming (count: 68974). Second best hit was Nextera (count: 0)
+
+Writing report to 'R-pAb_R1_001.fastq.gz_trimming_report.txt'
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: fastqs/R-pAb_R1_001.fastq.gz
+Trimming mode: single-end
+Trim Galore version: 0.5.0
+Cutadapt version: 1.18
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length before a sequence gets removed: 10 bp
+Running FastQC on the data once trimming has completed
+Running FastQC with the following extra arguments: '-t 4 --outdir ./fastQC'
+Output file(s) will be GZIP compressed
+
+Writing final adapter and quality trimmed output to R-pAb_R1_001_trimmed.fq.gz
+
+
+  >>> Now performing quality (cutoff 20) and adapter trimming in a single pass for the adapter sequence: 'AGATCGGAAGAGC' from file fastqs/R-pAb_R1_001.fastq.gz <<< 
+10000000 sequences processed
+20000000 sequences processed
+30000000 sequences processed
+40000000 sequences processed
+50000000 sequences processed
+This is cutadapt 1.18 with Python 3.7.1
+Command line parameters: -f fastq -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC fastqs/R-pAb_R1_001.fastq.gz
+Processing reads on 1 core in single-end mode ...
+Finished in 560.19 s (10 us/read; 6.04 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              56,354,529
+Reads with adapters:                47,258,552 (83.9%)
+Reads written (passing filters):    56,354,529 (100.0%)
+
+Total basepairs processed: 2,817,726,450 bp
+Quality-trimmed:               1,561,910 bp (0.1%)
+Total written (filtered):  1,508,086,576 bp (53.5%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 47258552 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 68.4%
+  C: 14.0%
+  G: 7.1%
+  T: 8.0%
+  none/other: 2.5%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	2156635	14088632.2	0	2156635
+2	186998	3522158.1	0	186998
+3	53707	880539.5	0	53707
+4	31711	220134.9	0	31711
+5	36661	55033.7	0	36661
+6	29360	13758.4	0	29360
+7	29808	3439.6	0	29808
+8	28509	859.9	0	28509
+9	30640	215.0	0	29961 679
+10	432690	53.7	1	39335 393355
+11	405677	13.4	1	40068 365609
+12	494596	3.4	1	48237 446359
+13	505489	0.8	1	49775 455714
+14	562009	0.8	1	50040 511969
+15	944703	0.8	1	59565 885138
+16	1021224	0.8	1	76975 944249
+17	942825	0.8	1	78283 864542
+18	947178	0.8	1	82586 864592
+19	949583	0.8	1	72995 876588
+20	964638	0.8	1	74292 890346
+21	1070351	0.8	1	68879 1001472
+22	958565	0.8	1	64779 893786
+23	853814	0.8	1	69428 784386
+24	898198	0.8	1	58841 839357
+25	1314273	0.8	1	82194 1232079
+26	1347764	0.8	1	92000 1255764
+27	2026800	0.8	1	93231 1933569
+28	8018584	0.8	1	128669 7889915
+29	4017436	0.8	1	268902 3748534
+30	1962973	0.8	1	137082 1825891
+31	1208796	0.8	1	170768 1038028
+32	1148777	0.8	1	153830 994947
+33	799640	0.8	1	127003 672637
+34	1461635	0.8	1	100438 1361197
+35	534505	0.8	1	94675 439830
+36	362793	0.8	1	58450 304343
+37	306569	0.8	1	77536 229033
+38	341021	0.8	1	98481 242540
+39	274901	0.8	1	40463 234438
+40	301546	0.8	1	53620 247926
+41	384020	0.8	1	60898 323122
+42	415191	0.8	1	80491 334700
+43	690928	0.8	1	139685 551243
+44	706651	0.8	1	103320 603331
+45	1078284	0.8	1	280362 797922
+46	421562	0.8	1	76550 345012
+47	396291	0.8	1	35813 360478
+48	910084	0.8	1	105762 804322
+49	1174496	0.8	1	331692 842804
+50	1117463	0.8	1	81192 1036271
+
+
+RUN STATISTICS FOR INPUT FILE: fastqs/R-pAb_R1_001.fastq.gz
+=============================================
+56354529 sequences processed in total
+Sequences removed because they became shorter than the length cutoff of 10 bp:	7308835 (13.0%)
+
+
+  >>> Now running FastQC on the data <<<
+
+Started analysis of R-pAb_R1_001_trimmed.fq.gz
+Approx 5% complete for R-pAb_R1_001_trimmed.fq.gz
+Approx 10% complete for R-pAb_R1_001_trimmed.fq.gz
+Approx 15% complete for R-pAb_R1_001_trimmed.fq.gz
+Approx 20% complete for R-pAb_R1_001_trimmed.fq.gz
+Approx 25% complete for R-pAb_R1_001_trimmed.fq.gz
+Approx 30% complete for R-pAb_R1_001_trimmed.fq.gz
+Approx 35% complete for R-pAb_R1_001_trimmed.fq.gz
+Approx 40% complete for R-pAb_R1_001_trimmed.fq.gz
+Approx 45% complete for R-pAb_R1_001_trimmed.fq.gz
+Approx 50% complete for R-pAb_R1_001_trimmed.fq.gz
+Approx 55% complete for R-pAb_R1_001_trimmed.fq.gz
+Approx 60% complete for R-pAb_R1_001_trimmed.fq.gz
+Approx 65% complete for R-pAb_R1_001_trimmed.fq.gz
+Approx 70% complete for R-pAb_R1_001_trimmed.fq.gz
+Approx 75% complete for R-pAb_R1_001_trimmed.fq.gz
+Approx 80% complete for R-pAb_R1_001_trimmed.fq.gz
+Approx 85% complete for R-pAb_R1_001_trimmed.fq.gz
+Approx 90% complete for R-pAb_R1_001_trimmed.fq.gz
+Approx 95% complete for R-pAb_R1_001_trimmed.fq.gz
+Analysis complete for R-pAb_R1_001_trimmed.fq.gz
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 1300916 sequences (40000061 bp)...
+[M::process] read 1304392 sequences (40000070 bp)...
+[M::mem_process_seqs] Processed 1300916 reads in 39.381 CPU sec, 9.601 real sec
+[M::process] read 1303816 sequences (40000006 bp)...
+[M::mem_process_seqs] Processed 1304392 reads in 41.705 CPU sec, 9.879 real sec
+[M::process] read 1303856 sequences (40000095 bp)...
+[M::mem_process_seqs] Processed 1303816 reads in 41.576 CPU sec, 9.852 real sec
+[M::process] read 1305804 sequences (40000042 bp)...
+[M::mem_process_seqs] Processed 1303856 reads in 41.841 CPU sec, 9.896 real sec
+[M::process] read 1304164 sequences (40000009 bp)...
+[M::mem_process_seqs] Processed 1305804 reads in 42.212 CPU sec, 9.982 real sec
+[M::process] read 1305850 sequences (40000049 bp)...
+[M::mem_process_seqs] Processed 1304164 reads in 42.190 CPU sec, 9.971 real sec
+[M::process] read 1305260 sequences (40000029 bp)...
+[M::mem_process_seqs] Processed 1305850 reads in 41.482 CPU sec, 9.797 real sec
+[M::process] read 1305200 sequences (40000047 bp)...
+[M::mem_process_seqs] Processed 1305260 reads in 41.398 CPU sec, 9.787 real sec
+[M::process] read 1304996 sequences (40000039 bp)...
+[M::mem_process_seqs] Processed 1305200 reads in 41.529 CPU sec, 9.818 real sec
+[M::process] read 1305328 sequences (40000022 bp)...
+[M::mem_process_seqs] Processed 1304996 reads in 41.026 CPU sec, 9.677 real sec
+[M::process] read 1305448 sequences (40000039 bp)...
+[M::mem_process_seqs] Processed 1305328 reads in 41.432 CPU sec, 9.774 real sec
+[M::process] read 1306504 sequences (40000010 bp)...
+[M::mem_process_seqs] Processed 1305448 reads in 41.848 CPU sec, 9.863 real sec
+[M::process] read 1306214 sequences (40000053 bp)...
+[M::mem_process_seqs] Processed 1306504 reads in 41.306 CPU sec, 9.739 real sec
+[M::process] read 1307138 sequences (40000021 bp)...
+[M::mem_process_seqs] Processed 1306214 reads in 41.294 CPU sec, 9.737 real sec
+[M::process] read 1307686 sequences (40000076 bp)...
+[M::mem_process_seqs] Processed 1307138 reads in 41.463 CPU sec, 9.773 real sec
+[M::process] read 1307298 sequences (40000027 bp)...
+[M::mem_process_seqs] Processed 1307686 reads in 41.108 CPU sec, 9.723 real sec
+[M::process] read 1306460 sequences (40000059 bp)...
+[M::mem_process_seqs] Processed 1307298 reads in 42.220 CPU sec, 9.965 real sec
+[M::process] read 1305872 sequences (40000051 bp)...
+[M::mem_process_seqs] Processed 1306460 reads in 42.638 CPU sec, 10.060 real sec
+[M::process] read 1303796 sequences (40000019 bp)...
+[M::mem_process_seqs] Processed 1305872 reads in 41.586 CPU sec, 9.807 real sec
+[M::process] read 1303594 sequences (40000000 bp)...
+[M::mem_process_seqs] Processed 1303796 reads in 41.840 CPU sec, 9.873 real sec
+[M::process] read 1304852 sequences (40000004 bp)...
+[M::mem_process_seqs] Processed 1303594 reads in 41.885 CPU sec, 9.890 real sec
+[M::process] read 1304624 sequences (40000022 bp)...
+[M::mem_process_seqs] Processed 1304852 reads in 41.618 CPU sec, 9.834 real sec
+[M::process] read 1304500 sequences (40000032 bp)...
+[M::mem_process_seqs] Processed 1304624 reads in 41.710 CPU sec, 9.842 real sec
+[M::process] read 1304588 sequences (40000016 bp)...
+[M::mem_process_seqs] Processed 1304500 reads in 43.461 CPU sec, 10.291 real sec
+[M::process] read 1304784 sequences (40000065 bp)...
+[M::mem_process_seqs] Processed 1304588 reads in 42.124 CPU sec, 9.965 real sec
+[M::process] read 1304444 sequences (40000026 bp)...
+[M::mem_process_seqs] Processed 1304784 reads in 42.320 CPU sec, 9.995 real sec
+[M::process] read 1305240 sequences (40000016 bp)...
+[M::mem_process_seqs] Processed 1304444 reads in 42.410 CPU sec, 9.999 real sec
+[M::process] read 1306320 sequences (40000066 bp)...
+[M::mem_process_seqs] Processed 1305240 reads in 41.975 CPU sec, 9.900 real sec
+[M::process] read 1304668 sequences (40000000 bp)...
+[M::mem_process_seqs] Processed 1306320 reads in 41.415 CPU sec, 9.749 real sec
+[M::process] read 1304830 sequences (40000069 bp)...
+[M::mem_process_seqs] Processed 1304668 reads in 41.862 CPU sec, 9.858 real sec
+[M::process] read 1306782 sequences (40000044 bp)...
+[M::mem_process_seqs] Processed 1304830 reads in 41.462 CPU sec, 9.780 real sec
+[M::process] read 1306218 sequences (40000027 bp)...
+[M::mem_process_seqs] Processed 1306782 reads in 41.419 CPU sec, 9.772 real sec
+[M::process] read 1306278 sequences (40000019 bp)...
+[M::mem_process_seqs] Processed 1306218 reads in 41.494 CPU sec, 9.798 real sec
+[M::process] read 1309094 sequences (40000010 bp)...
+[M::mem_process_seqs] Processed 1306278 reads in 41.555 CPU sec, 9.884 real sec
+[M::process] read 1306442 sequences (40000062 bp)...
+[M::mem_process_seqs] Processed 1309094 reads in 41.124 CPU sec, 9.696 real sec
+[M::process] read 1306578 sequences (40000052 bp)...
+[M::mem_process_seqs] Processed 1306442 reads in 41.656 CPU sec, 9.813 real sec
+[M::process] read 1297710 sequences (40000031 bp)...
+[M::mem_process_seqs] Processed 1306578 reads in 41.514 CPU sec, 9.794 real sec
+[M::process] read 1298056 sequences (40000025 bp)...
+[M::mem_process_seqs] Processed 1297710 reads in 41.541 CPU sec, 9.805 real sec
+[M::process] read 1301208 sequences (40000012 bp)...
+[M::mem_process_seqs] Processed 1298056 reads in 42.006 CPU sec, 9.913 real sec
+[M::process] read 1297918 sequences (40000010 bp)...
+[M::mem_process_seqs] Processed 1301208 reads in 41.686 CPU sec, 9.825 real sec
+[M::process] read 1296804 sequences (40000021 bp)...
+[M::mem_process_seqs] Processed 1297918 reads in 41.434 CPU sec, 9.765 real sec
+[M::process] read 1302854 sequences (40000030 bp)...
+[M::mem_process_seqs] Processed 1296804 reads in 41.681 CPU sec, 9.825 real sec
+[M::process] read 1282898 sequences (40000049 bp)...
+[M::mem_process_seqs] Processed 1302854 reads in 41.689 CPU sec, 9.835 real sec
+[M::process] read 1296346 sequences (40000007 bp)...
+[M::mem_process_seqs] Processed 1282898 reads in 41.133 CPU sec, 9.694 real sec
+[M::process] read 1302952 sequences (40000042 bp)...
+[M::mem_process_seqs] Processed 1296346 reads in 42.001 CPU sec, 9.907 real sec
+[M::process] read 1254820 sequences (40000026 bp)...
+[M::mem_process_seqs] Processed 1302952 reads in 41.554 CPU sec, 9.802 real sec
+[M::process] read 1303770 sequences (40000063 bp)...
+[M::mem_process_seqs] Processed 1254820 reads in 41.544 CPU sec, 9.809 real sec
+[M::process] read 1303528 sequences (40000053 bp)...
+[M::mem_process_seqs] Processed 1303770 reads in 41.753 CPU sec, 9.853 real sec
+[M::process] read 1303550 sequences (40000022 bp)...
+[M::mem_process_seqs] Processed 1303528 reads in 41.661 CPU sec, 9.821 real sec
+[M::process] read 1304136 sequences (40000025 bp)...
+[M::mem_process_seqs] Processed 1303550 reads in 41.652 CPU sec, 9.819 real sec
+[M::process] read 1303280 sequences (40000019 bp)...
+[M::mem_process_seqs] Processed 1304136 reads in 41.728 CPU sec, 9.837 real sec
+[M::process] read 1304420 sequences (40000057 bp)...
+[M::mem_process_seqs] Processed 1303280 reads in 41.580 CPU sec, 9.794 real sec
+[M::process] read 1301502 sequences (40000001 bp)...
+[M::mem_process_seqs] Processed 1304420 reads in 41.407 CPU sec, 9.756 real sec
+[M::process] read 1304960 sequences (40000019 bp)...
+[M::mem_process_seqs] Processed 1301502 reads in 41.686 CPU sec, 9.824 real sec
+[M::process] read 1301354 sequences (40000055 bp)...
+[M::mem_process_seqs] Processed 1304960 reads in 41.585 CPU sec, 9.791 real sec
+[M::process] read 1301252 sequences (40000015 bp)...
+[M::mem_process_seqs] Processed 1301354 reads in 41.249 CPU sec, 9.715 real sec
+[M::process] read 1302928 sequences (40000060 bp)...
+[M::mem_process_seqs] Processed 1301252 reads in 41.991 CPU sec, 9.895 real sec
+[M::process] read 1301546 sequences (40000027 bp)...
+[M::mem_process_seqs] Processed 1302928 reads in 41.670 CPU sec, 9.819 real sec
+[M::process] read 1300680 sequences (40000058 bp)...
+[M::mem_process_seqs] Processed 1301546 reads in 41.502 CPU sec, 9.781 real sec
+[M::process] read 1300858 sequences (40000055 bp)...
+[M::mem_process_seqs] Processed 1300680 reads in 41.863 CPU sec, 9.866 real sec
+[M::process] read 1302630 sequences (40000047 bp)...
+[M::mem_process_seqs] Processed 1300858 reads in 41.651 CPU sec, 9.813 real sec
+[M::process] read 1302826 sequences (40000001 bp)...
+[M::mem_process_seqs] Processed 1302630 reads in 41.430 CPU sec, 9.771 real sec
+[M::process] read 1302754 sequences (40000016 bp)...
+[M::mem_process_seqs] Processed 1302826 reads in 41.953 CPU sec, 9.890 real sec
+[M::process] read 1300482 sequences (40000043 bp)...
+[M::mem_process_seqs] Processed 1302754 reads in 41.810 CPU sec, 9.854 real sec
+[M::process] read 1183690 sequences (40000037 bp)...
+[M::mem_process_seqs] Processed 1300482 reads in 41.529 CPU sec, 9.805 real sec
+[M::process] read 1283790 sequences (40000017 bp)...
+[M::mem_process_seqs] Processed 1183690 reads in 41.961 CPU sec, 9.896 real sec
+[M::process] read 1301788 sequences (40000035 bp)...
+[M::mem_process_seqs] Processed 1283790 reads in 41.746 CPU sec, 9.868 real sec
+[M::process] read 1269878 sequences (40000011 bp)...
+[M::mem_process_seqs] Processed 1301788 reads in 41.605 CPU sec, 9.818 real sec
+[M::process] read 1295610 sequences (40000034 bp)...
+[M::mem_process_seqs] Processed 1269878 reads in 41.700 CPU sec, 9.844 real sec
+[M::process] read 1303372 sequences (40000066 bp)...
+[M::mem_process_seqs] Processed 1295610 reads in 41.362 CPU sec, 9.755 real sec
+[M::process] read 1304004 sequences (40000009 bp)...
+[M::mem_process_seqs] Processed 1303372 reads in 41.488 CPU sec, 9.783 real sec
+[M::process] read 1304440 sequences (40000003 bp)...
+[M::mem_process_seqs] Processed 1304004 reads in 41.444 CPU sec, 9.761 real sec
+[M::process] read 914178 sequences (28005170 bp)...
+[M::mem_process_seqs] Processed 1304440 reads in 41.226 CPU sec, 9.809 real sec
+[M::mem_process_seqs] Processed 914178 reads in 29.007 CPU sec, 6.956 real sec
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa mem -t 4 -M -R @RG\tID:R-in\tSM:R-in\tPL:ILLUMINA\tLB:R-in\tPU:1 /Volumes/TOSHIBA/SQ190110D–R6_Colombia/Analysis/Homo_sapiens/UCSC/hg38/Sequence/BWAIndex/genome.fa R-in_R1_001_trimmed.fq.gz
+[main] Real time: 736.034 sec; CPU: 3073.886 sec
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 1327312 sequences (40000006 bp)...
+[M::process] read 1328302 sequences (40000038 bp)...
+[M::mem_process_seqs] Processed 1327312 reads in 47.372 CPU sec, 11.591 real sec
+[M::process] read 1328860 sequences (40000022 bp)...
+[M::mem_process_seqs] Processed 1328302 reads in 49.280 CPU sec, 11.773 real sec
+[M::process] read 1329954 sequences (40000006 bp)...
+[M::mem_process_seqs] Processed 1328860 reads in 49.540 CPU sec, 11.835 real sec
+[M::process] read 1329124 sequences (40000000 bp)...
+[M::mem_process_seqs] Processed 1329954 reads in 49.045 CPU sec, 11.703 real sec
+[M::process] read 1330802 sequences (40000028 bp)...
+[M::mem_process_seqs] Processed 1329124 reads in 48.612 CPU sec, 11.602 real sec
+[M::process] read 1330504 sequences (40000039 bp)...
+[M::mem_process_seqs] Processed 1330802 reads in 49.645 CPU sec, 11.852 real sec
+[M::process] read 1330986 sequences (40000051 bp)...
+[M::mem_process_seqs] Processed 1330504 reads in 49.718 CPU sec, 11.858 real sec
+[M::process] read 1330528 sequences (40000046 bp)...
+[M::mem_process_seqs] Processed 1330986 reads in 49.036 CPU sec, 11.683 real sec
+[M::process] read 1328158 sequences (40000002 bp)...
+[M::mem_process_seqs] Processed 1330528 reads in 49.724 CPU sec, 11.856 real sec
+[M::process] read 1328082 sequences (40000024 bp)...
+[M::mem_process_seqs] Processed 1328158 reads in 49.149 CPU sec, 11.713 real sec
+[M::process] read 1328474 sequences (40000015 bp)...
+[M::mem_process_seqs] Processed 1328082 reads in 49.693 CPU sec, 11.856 real sec
+[M::process] read 1328470 sequences (40000013 bp)...
+[M::mem_process_seqs] Processed 1328474 reads in 49.265 CPU sec, 11.732 real sec
+[M::process] read 1329790 sequences (40000012 bp)...
+[M::mem_process_seqs] Processed 1328470 reads in 49.470 CPU sec, 11.785 real sec
+[M::process] read 1330508 sequences (40000014 bp)...
+[M::mem_process_seqs] Processed 1329790 reads in 49.768 CPU sec, 11.865 real sec
+[M::process] read 1328436 sequences (40000055 bp)...
+[M::mem_process_seqs] Processed 1330508 reads in 48.929 CPU sec, 11.644 real sec
+[M::process] read 1330054 sequences (40000029 bp)...
+[M::mem_process_seqs] Processed 1328436 reads in 49.403 CPU sec, 11.770 real sec
+[M::process] read 1332338 sequences (40000042 bp)...
+[M::mem_process_seqs] Processed 1330054 reads in 49.737 CPU sec, 11.832 real sec
+[M::process] read 1328370 sequences (40000068 bp)...
+[M::mem_process_seqs] Processed 1332338 reads in 48.636 CPU sec, 11.565 real sec
+[M::process] read 1322224 sequences (40000004 bp)...
+[M::mem_process_seqs] Processed 1328370 reads in 49.454 CPU sec, 11.777 real sec
+[M::process] read 1321660 sequences (40000017 bp)...
+[M::mem_process_seqs] Processed 1322224 reads in 49.809 CPU sec, 11.847 real sec
+[M::process] read 1317510 sequences (40000035 bp)...
+[M::mem_process_seqs] Processed 1321660 reads in 49.081 CPU sec, 11.664 real sec
+[M::process] read 1322002 sequences (40000015 bp)...
+[M::mem_process_seqs] Processed 1317510 reads in 49.572 CPU sec, 11.806 real sec
+[M::process] read 1298914 sequences (40000024 bp)...
+[M::mem_process_seqs] Processed 1322002 reads in 50.010 CPU sec, 11.910 real sec
+[M::process] read 1329396 sequences (40000002 bp)...
+[M::mem_process_seqs] Processed 1298914 reads in 49.141 CPU sec, 11.689 real sec
+[M::process] read 1328960 sequences (40000017 bp)...
+[M::mem_process_seqs] Processed 1329396 reads in 49.957 CPU sec, 11.888 real sec
+[M::process] read 1328244 sequences (40000032 bp)...
+[M::mem_process_seqs] Processed 1328960 reads in 50.125 CPU sec, 11.933 real sec
+[M::process] read 1327926 sequences (40000002 bp)...
+[M::mem_process_seqs] Processed 1328244 reads in 49.310 CPU sec, 11.727 real sec
+[M::process] read 1327778 sequences (40000019 bp)...
+[M::mem_process_seqs] Processed 1327926 reads in 49.587 CPU sec, 11.800 real sec
+[M::process] read 1327704 sequences (40000072 bp)...
+[M::mem_process_seqs] Processed 1327778 reads in 50.457 CPU sec, 12.014 real sec
+[M::process] read 1327400 sequences (40000054 bp)...
+[M::mem_process_seqs] Processed 1327704 reads in 49.669 CPU sec, 11.807 real sec
+[M::process] read 1328048 sequences (40000009 bp)...
+[M::mem_process_seqs] Processed 1327400 reads in 49.911 CPU sec, 11.866 real sec
+[M::process] read 1287616 sequences (40000075 bp)...
+[M::mem_process_seqs] Processed 1328048 reads in 49.957 CPU sec, 11.891 real sec
+[M::process] read 1288700 sequences (40000029 bp)...
+[M::mem_process_seqs] Processed 1287616 reads in 48.917 CPU sec, 11.625 real sec
+[M::process] read 1303962 sequences (40000039 bp)...
+[M::mem_process_seqs] Processed 1288700 reads in 49.774 CPU sec, 11.844 real sec
+[M::process] read 1328366 sequences (40000092 bp)...
+[M::mem_process_seqs] Processed 1303962 reads in 49.002 CPU sec, 11.638 real sec
+[M::process] read 1329484 sequences (40000017 bp)...
+[M::mem_process_seqs] Processed 1328366 reads in 49.521 CPU sec, 11.763 real sec
+[M::process] read 40748 sequences (1227157 bp)...
+[M::mem_process_seqs] Processed 1329484 reads in 48.797 CPU sec, 11.919 real sec
+[M::mem_process_seqs] Processed 40748 reads in 2.151 CPU sec, 0.453 real sec
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa mem -t 4 -M -R @RG\tID:R-pAb\tSM:R-pAb\tPL:ILLUMINA\tLB:R-pAb\tPU:1 /Volumes/TOSHIBA/SQ190110D–R6_Colombia/Analysis/Homo_sapiens/UCSC/hg38/Sequence/BWAIndex/genome.fa R-pAb_R1_001_trimmed.fq.gz
+[main] Real time: 441.007 sec; CPU: 1834.506 sec
+[bam_sort_core] merging from 21 files and 1 in-memory blocks...
+[bam_sort_core] merging from 10 files and 1 in-memory blocks...
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+main.sh: line 61: multiqc: command not found
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda deactivate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+Could not find conda environment: multiqc
+You can list all discoverable environments with `conda info --envs`.
+
+main.sh: line 108: multiqc: command not found

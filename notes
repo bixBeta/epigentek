@@ -4,4 +4,8 @@ bwa on base
 macs2 in macs2
 homer base
 multiqc chip-seq
+picard in chip-seq
 
+
+
+geonome index installed on TOSHIBA

@@ -32,9 +32,11 @@ BAM were then sorted and marked for read duplication using picard tools.
 
 All duplicated marked sequences were then removed from the BAM files and the filtered bam files were then used for the downstream analysis. 
 
-Chip-peaks were called on filtered bam files using macs2 peak caller.
+Chip-peaks (--qvalue 0.05) were called on filtered bam files using macs2 peak caller against the input-control sample.
 
 Peak calls were annotated using ChIPseeker Bioconductor package and HOMER perl suite of tools. 
+
+Bedgraphs were created using makeUCSCfile using `-o auto -fsize 1e10 -res 1 -color 106,42,73 -style chipseq` parameters.
 
 
 

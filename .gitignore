@@ -1,1 +1,12 @@
+fastQC
 fastqs
+Homo_sapiens
+primary-BAMS
+trimmed_fastqs
+TrimQC_stats
+old-analysis-wrong-files
+dedup-BAMS
+old-analysis-wrong-files
+*_data
+*.html
+
